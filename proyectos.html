@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - The Violet Report</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="estiloproyectos.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <a href="index.html" class="logo-container">
+            <img src="img/vio_logo_header.png" alt="Vio">
+        </a>
+    </header>
+
+    <nav id="navbar-principal">
+        <a href="index.html" class="nav-home-logo">
+            <img src="img/v_home_button.png" alt="Inicio">
+        </a>
+
+        <div class="nav-content">
+            <h2>PROYECTOS</h2>
+            <ul>
+                <li><a href="proyectos.html">PROYECTOS</a></li>
+                <li><a href="jukebox.html">JUKE</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="corkboard-container">
+        
+        <div class="project-item" onclick="toggleProject(this)">
+            <img class="small-ticket-img" src="img/ticket_plush_hour.png" alt="Ticket Plush Hour">
+            <div class="big-reveal-container">
+                <img class="reveal-img visual" src="img/postcard_plush_hour_visual.png" alt="Plush Hour Visual">
+                <img class="reveal-img info" src="img/postcard_plush_hour_info.png" alt="Plush Hour Info">
+            </div>
+        </div>
+
+        <div class="project-item" onclick="toggleProject(this)">
+            <img class="small-ticket-img" src="img/ticket_motion_graphics.png" alt="Ticket Motion Graphics">
+            <div class="big-reveal-container">
+                <img class="reveal-img visual" src="img/postcard_motion_graphics_visual.png" alt="Motion Graphics Visual">
+                <img class="reveal-img info" src="img/postcard_motion_graphics_info.png" alt="Motion Graphics Info">
+            </div>
+        </div>
+
+        <div class="project-item" onclick="toggleProject(this)">
+            <img class="small-ticket-img" src="img/ticket_empire_ants.png" alt="Ticket Empire Ants">
+            <div class="big-reveal-container">
+                <img class="reveal-img visual" src="img/postcard_empire_ants_visual.png" alt="Empire Ants Visual">
+                <img class="reveal-img info" src="img/postcard_empire_ants_info.png" alt="Empire Ants Info">
+            </div>
+        </div>
+
+        <div class="project-item" onclick="toggleProject(this)">
+            <img class="small-ticket-img" src="img/ticket_animacion.png" alt="Ticket Animacion">
+            <div class="big-reveal-container">
+                <img class="reveal-img visual" src="img/postcard_animacion_visual.png" alt="Animacion Visual">
+                <img class="reveal-img info" src="img/postcard_animacion_info.png" alt="Animacion Info">
+            </div>
+        </div>
+
+        <div class="project-item" onclick="toggleProject(this)">
+            <img class="small-ticket-img" src="img/ticket_processing.png" alt="Ticket Processing">
+            <div class="big-reveal-container">
+                <img class="reveal-img visual" src="img/postcard_processing_visual.png" alt="Processing Visual">
+                <img class="reveal-img info" src="img/postcard_processing_info.png" alt="Processing Info">
+            </div>
+        </div>
+
+    </main>
+
+    <div class="diner-sign-structure">
+        <img src="img/postes_completo.png" alt="Soporte de madera" class="posts-base-img">
+        
+        <a href="jukebox.html" class="hanging-sign-link">
+            <img src="img/letrero_diner.png" alt="Ir al Diner">
+        </a>
+    </div>
+
+    <footer>
+        <p>UNIVERSIDAD SAN FRANCISCO DE QUITO</p>
+        <p>&copy; 2025 Violetta Delle-Donne</p>
+    </footer>
+
+    <script>
+        function toggleProject(element) {
+            const activeProjects = document.querySelectorAll('.project-item.active');
+            activeProjects.forEach(proj => {
+                if (proj !== element) {
+                    proj.classList.remove('active');
+                }
+            });
+            element.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
